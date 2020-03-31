@@ -1,0 +1,12 @@
+<div class="container">
+<% @articles.each do |article| %>
+    <ul>
+      <li>
+        <%= link_to article.title, article_path(article) %>
+      </li>
+      <li>
+        <%= article.content[0..20] + "..." %>
+      </li>
+    </ul>
+<% end %>
+</div>
